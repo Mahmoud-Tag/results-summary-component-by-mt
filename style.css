@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap");
+:root {
+  --Light-red: hsl(0, 100%, 67%);
+  --Orangey-yellow: hsl(39, 100%, 56%);
+  --Green-teal: hsl(166, 100%, 37%);
+  --Cobalt-blue: hsl(234, 85%, 45%);
+  --Light-slate-blue-background: hsl(252, 100%, 67%);
+  --Light-royal-blue-background: hsl(241, 81%, 54%);
+  --Violet-blue-circle: hsl(256, 72%, 46%);
+  --Persian-blue-circle: hsla(241, 72%, 46%, 0);
+  --White: hsl(0, 0%, 100%);
+  --Pale-blue: hsl(221, 100%, 96%);
+  --Light-lavender: hsl(241, 100%, 89%);
+  --Dark-gray-blue: hsl(224, 30%, 27%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Hanken Grotesk", sans-serif;
+}
+body {
+  min-height: 100vh;
+  background-color: var(--White);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.main-container {
+  width: 65%;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(150px, 1fr));
+  grid-template-rows: repeat(1, minmax(350px, 1fr));
+  background-color: var(--White);
+  border-radius: 20px;
+}
+@media screen and (max-width: 675px) {
+  .main-container {
+    width: 100%;
+    grid-template-columns: repeat(1, minmax(300px, 1fr));
+    grid-template-rows: repeat(2, minmax(350px, 1fr));
+  }
+}
+.main-container .left-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+  padding: 10px;
+  border-radius: 20px;
+  background: var(--Cobalt-blue);
+  background: linear-gradient(
+    180deg,
+    rgba(113, 83, 253, 1) 0%,
+    rgba(46, 43, 233, 1) 0%,
+    rgba(80, 63, 243, 1) 16%,
+    rgba(80, 63, 243, 1) 22%,
+    rgba(80, 63, 243, 1) 25%,
+    rgba(46, 43, 233, 1) 77%
+  );
+}
+@media screen and (max-width: 675px) {
+  .main-container .left-div {
+    border-top-left-radius:0;
+    border-top-right-radius: 0;
+  }
+}
+.main-container .left-div h4 {
+  color: var(--White);
+  opacity: 0.6;
+  font-weight: 500;
+  font-size: 16px;
+}
+.main-container .left-div .circle-left-div {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  background: var(--Violet-blue-circle);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+.main-container .left-div .circle-left-div h1 {
+  color: var(--White);
+  font-weight: 800;
+  font-size: 50px;
+}
+.main-container .left-div .circle-left-div span {
+  color: var(--White);
+  opacity: 0.6;
+  font-weight: 500;
+  font-size: 10px;
+}
+.main-container .left-div h2 {
+  color: var(--White);
+  font-weight: 500;
+}
+.main-container .left-div p {
+  color: var(--White);
+  opacity: 0.6;
+  font-size: 14px;
+  font-weight: 500;
+}
+.main-container .right-div {
+  background-color: var(--White);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 15px;
+  box-shadow: rgba(33, 35, 38, 0.1) 0px 10px 10px -10px;
+  border-radius: 20px;
+}
+.main-container .right-div h3 {
+  align-self: start;
+  color: var(--Dark-gray-blue);
+}
+.main-container .right-div ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 10px;
+  list-style: none;
+  width: 100%;
+}
+.main-container .right-div ul li {
+  padding: 10px 15px;
+  background-color: var(--Pale-blue);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-radius: 5px;
+  opacity: 0.8;
+  font-size: 14px;
+}
+.main-container .right-div ul li span img {
+  width: 13px;
+  height: 13px;
+  margin-right: 10px;
+}
+.main-container .right-div ul li span b {
+  color: var(--Dark-gray-blue);
+}
+.main-container .right-div ul li span:last-child:not(b) {
+  color: var(--Light-lavender);
+  font-weight: bold;
+}
+.main-container .right-div ul li:first-child span:first-child {
+  color: var(--Light-red);
+}
+.main-container .right-div ul li:nth-child(2) {
+  background-color: hsl(42, 100%, 97%);
+}
+.main-container .right-div ul li:nth-child(2) span:first-child {
+  color: var(--Orangey-yellow);
+}
+.main-container .right-div ul li:nth-child(-2) span:first-child {
+  color: var(--Green-teal);
+}
+.main-container .right-div ul li:last-child span:first-child {
+  color: var(--Cobalt-blue);
+}
+.main-container .right-div a {
+  display: block;
+  padding: 10px 15px;
+  background-color: var(--Dark-gray-blue);
+  text-decoration: none;
+  color: var(--White);
+  border-radius: 25px;
+  width: 100%;
+  text-align: center;
+  transition: all 0.5s;
+}
+.main-container .right-div a:hover {
+  background-color: var(--Cobalt-blue);
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-top: 50px;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+  text-decoration: none;
+}
